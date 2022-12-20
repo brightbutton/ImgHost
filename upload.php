@@ -120,7 +120,7 @@ function save_files(){
             $file_tmp = $_FILES["images"]["tmp_name"][$i];
             $file_name = $_FILES["images"]["name"][$i];
         
-            if(str_contains($file_type, "image") {
+            if(str_contains($file_type, "image")) {
 				
                 move_uploaded_file($file_tmp, "./usrimg/$folder/$file_name");
             }
