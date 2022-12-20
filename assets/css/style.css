@@ -1,0 +1,193 @@
+body {
+	margin: 0px;
+	font-family: "Secular One";
+}
+span {
+	display: block;
+	height: 23px;
+	overflow: hidden;
+}
+input {
+	box-sizing:border-box;
+	display: block;
+    width: 100%;
+	border:2px #fff solid;
+	padding: 10px;
+	border-radius: 3px;
+	color: #99deff;
+	font-family: "Secular One";
+}
+input:focus-visible {
+	border:2px #56c8ff solid;
+	outline: 0;
+	color: #56c8ff;
+}
+input[type="file"]{
+	border: 0;
+	display:none;
+}
+select {
+	border:2px #fff solid;
+	width: -webkit-fill-available;
+	padding: 9px;
+	border-radius: 4px;
+	color: #56c8ff;
+	font-family: "Secular One";
+}
+select:focus-visible {
+	border:2px #56c8ff solid;
+	outline: 0;
+}
+::placeholder {
+	color: #99deff;
+}
+.form_wrapper{
+transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.form_element{
+	padding: 10px 25px;
+}
+
+.form_group{
+	width: 100%;
+	display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form_upload{
+    padding: 10px;
+	border-radius: 10px;
+	color: #00acff;
+	background-color: #e8f8ff;
+}
+
+.input_file{
+	border: 0px;
+}
+.input_file_label{
+	height: 100px;
+	width: 100%;
+	display: inline-block;
+    cursor: pointer;
+	background-image: url(../img/img.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-color: #a2e3ff;
+    border-radius: 5px;
+}
+
+
+.button_upload{
+    border: 2px #00acff solid;
+    width: -webkit-fill-available;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Secular One";
+    background-color: #00acff;
+    cursor: pointer;
+}
+.placeholder{
+	color: #ffffff00;
+}
+
+.message_success{
+	padding: 10px;
+    border-radius: 5px;
+    color: #5daf67;
+    background-color: #e1ffe1;
+    border: 2px #adffad solid;
+	margin-bottom: 20px;
+}
+
+.message_success > h1{
+	font-size: 20px;
+	margin-top: 0;
+    margin-block-start: 0;
+}
+
+.message_success > p{
+	font-size: 14px;
+	margin-block-start: 0;
+    margin-block-end: 0;
+	margin: 0;
+}
+
+.message_success > p > a{
+	color: #84c38b;
+	text-decoration: none;
+}
+
+
+.message_error{
+	padding: 10px;
+    border-radius: 5px;
+    color: #af5d5d;
+    background-color: #ffe1e1;
+    border: 2px #ffadad solid;
+	margin-bottom: 20px;
+}
+
+.message_error > h1{
+	font-size: 20px;
+	margin-top: 0;
+    margin-block-start: 0;
+}
+
+.message_error > p{
+	font-size: 14px;
+	margin-block-start: 0;
+    margin-block-end: 0;
+	margin: 0;
+}
+
+.message_error > p > a{
+	color: #c38484;
+	text-decoration: none;
+}
+
+.img_overview{
+	background-color: #e8f8ff;
+	padding: 10px;
+    border: #00acff 2px solid;
+    border-radius: 5px;
+	text-align: center;
+}
+
+.img_wrapper{
+	display: inline-block;
+    margin: 10px;
+}
+
+.img_element{
+	width:150px;
+	height: 100px;
+	background-size: cover;
+    background-position: center;
+	border-radius: 5px;
+	background-color: #e8f8ff;
+}
+
+
+@media screen and (max-width: 600px){
+	.form_group_list{
+	display:block;
+	}
+}
+
+@media screen and (max-width: 370px){
+	.form_group_list_2{
+	display:block;
+	}
+}
