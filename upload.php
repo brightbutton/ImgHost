@@ -115,11 +115,15 @@ function save_files(){
         mkdir("./usrimg/$folder", 0777, true);
     
         for($i=0; $i < $file_amount; $i++){
-        
+			
+			$file_type = $_FILES["images"]["type"][$i];
             $file_tmp = $_FILES["images"]["tmp_name"][$i];
             $file_name = $_FILES["images"]["name"][$i];
         
-            move_uploaded_file($file_tmp, "./usrimg/$folder/$file_name");
+            if(str_contains($file_type, "image") {
+				
+                move_uploaded_file($file_tmp, "./usrimg/$folder/$file_name");
+            }
         }
         
 		$link_view = "https://" . $_SERVER['SERVER_NAME'] . "/?id=" . $ids['0'];
