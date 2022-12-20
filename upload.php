@@ -106,7 +106,7 @@ function save_files(){
     global $html_output, $langvar;
     
     $file_amount = count($_FILES["images"]["tmp_name"]);
-	countUploads($file_amount);
+    countUploads($file_amount);
 	
     if($file_amount > 0){
         
@@ -124,7 +124,7 @@ function save_files(){
         
 		$link_view = "https://" . $_SERVER['SERVER_NAME'] . "/?id=" . $ids['0'];
 		$link_delete = "https://" . $_SERVER['SERVER_NAME'] . "/?id=" . $ids['1'];
-        $html_output = "
+		$html_output = "
 		<div class='message_success'>
 			<h1>". $langvar['message_success_uploaded_h1'] ."</h1>
 			<p><b>". $langvar['message_success_uploaded_p_link_view'] ."</b></br><a href='$link_view' target='_blank'>$link_view</a></br><b>". $langvar['message_success_uploaded_p_link_delete'] ."</b></br><a href='$link_delete' target='_blank'>$link_delete</a></p>
@@ -134,7 +134,7 @@ function save_files(){
 }
 
 if($_GET["error"] == "uploadlimit"){
-        $html_output = "
+		$html_output = "
 		<div class='message_error'>
 			<h1>". $langvar['message_error_uploadlimit_h1'] ."</h1>
 			<p>". $langvar['message_error_uploadlimit_p'] ."</p>
@@ -151,7 +151,7 @@ if(!empty($_POST['expiration'])){
 <html>
 <head>
 	<title>ImgHost - Image Uploader</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Secular+One&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Secular+One&display=swap">
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 

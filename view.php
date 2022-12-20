@@ -7,18 +7,18 @@ function load_images($ids){
     
     $images = array_slice(scandir($path), 2);
     $html_snippet = "";
-	$quotation = '"';
+    $quotation = '"';
 	
     foreach($images as $image){
         $html_snippet = $html_snippet . "
-		<div class='img_wrapper'>
-			<a href='$path/$image' target='_blank'>
-				<div class='img_element' style='background-image:url($quotation$path/$image$quotation), url(assets/img/img.png)'></div>
-			</a>
-		</div>";
+        <div class='img_wrapper'>
+            <a href='$path/$image' target='_blank'>
+                <div class='img_element' style='background-image:url($quotation$path/$image$quotation), url(assets/img/img.png)'></div>
+            </a>
+        </div>";
     }
     
-	return $html_snippet;
+    return $html_snippet;
 }
 
 
@@ -37,12 +37,12 @@ function check_password($info){
     {
         $html_snippet = "
         <form method='post' class='form_upload'>
-			<div class='form_element input_password'>
-				<input type='password' name='password' placeholder='".$langvar['password']."' />
-			</div>
-			<div class='form_element'> 
-				<button type='submit' class='button_upload'>".$langvar['enter']."</button>
-			</div>
+            <div class='form_element input_password'>
+                <input type='password' name='password' placeholder='".$langvar['password']."' />
+            </div>
+            <div class='form_element'> 
+                <button type='submit' class='button_upload'>".$langvar['enter']."</button>
+            </div>
         </form>
         ";
     }
@@ -63,7 +63,7 @@ function delete_images($ids){
 	rmdir("usrimg/$id_public/".substr($id_private, 0, 10));
 	rmdir("usrimg/$id_public");
 	
-    $mysqli_connect->query("DELETE FROM uploads WHERE id_public = '$id_public' AND id_private = '$id_private'");
+	$mysqli_connect->query("DELETE FROM uploads WHERE id_public = '$id_public' AND id_private = '$id_private'");
 	
 	header("Location: ./");
 }
@@ -88,12 +88,12 @@ function id_lookup($id){
 				check_password(array($result['id_public'], $result['id_private'], $result['password']));
 			}
             
-        }
-        else
-        {
-            delete_images(array($result['id_public'], $result['id_private']));
-        }
-    }
+		}
+		else
+		{
+			delete_images(array($result['id_public'], $result['id_private']));
+		}
+	}
 	else
 	{
 		header("Location: ./");
@@ -106,7 +106,7 @@ id_lookup($_GET["id"]);
 <html>
 <head>
 	<title>ImgHost - Image Viewer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Secular+One&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Secular+One&display=swap">
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
